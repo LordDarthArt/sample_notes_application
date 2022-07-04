@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Простой записочник</string>
+
+    <string name="notes_screen_title">Записки</string>
+    <string name="title_hint">Введите заголовок</string>
+    <string name="content_hint">Введите содержимое</string>
+    <string name="note_deleted">Записка удалена</string>
+    <string name="undo">Отменить</string>
+    <string name="unexpected_error">Неожиданная ошибка</string>
+    <string name="title">Заголовок</string>
+    <string name="date">Дата</string>
+    <string name="color">Цвет</string>
+    <string name="ascending">По возрастанию</string>
+    <string name="descending">По убыванию</string>
+
+    <string name="add_content_description">Добавить</string>
+    <string name="sort_content_description">Отсортировать</string>
+    <string name="save_note_content_description">Сохранить записку</string>
+</resources>

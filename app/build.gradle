@@ -1,0 +1,85 @@
+plugins {
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk system_props.compile_sdk
+
+    defaultConfig {
+        applicationId system_props.application_id
+        minSdk system_props.min_sdk
+        targetSdk system_props.target_sdk
+        versionCode system_props.version_code
+        versionName system_props.version_name
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion versions.compose_version
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+
+    implementation libraries.core_ktx
+    implementation libraries.compose_ui
+    implementation libraries.material_icons_extended
+    implementation libraries.compose_material3
+    implementation libraries.compose_ui_tooling
+    implementation libraries.compose_navigation
+    implementation libraries.hilt_navigation_compose
+    implementation libraries.coroutines_core
+    implementation libraries.coroutines_android
+    implementation libraries.lifecycle_viewmodel_compose
+    implementation libraries.lifecycle_runtime_ktx
+    implementation libraries.activity_compose
+    implementation libraries.hilt_android
+    implementation libraries.room_runtime
+    implementation libraries.room_ktx
+
+    testImplementation libraries.junit
+
+    androidTestImplementation libraries.android_junit
+    androidTestImplementation libraries.espresso
+    androidTestImplementation libraries.compose_ui_junit_test
+
+    debugImplementation libraries.compose_ui_tooling
+    debugImplementation libraries.compose_ui_test_manifest
+
+    kapt libraries.hilt_android_compiler
+    kapt libraries.hilt_compiler
+    kapt libraries.room_compiler
+}
+
+kapt {
+    correctErrorTypes = true
+}

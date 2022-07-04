@@ -1,0 +1,79 @@
+ext {
+    system_props = [
+            application_id                   : "ru.lorddarthart.samplenotesapplication",
+            compile_sdk                      : 32,
+            min_sdk                          : 21,
+            target_sdk                       : 32,
+            version_code                     : 1,
+            version_name                     : "1.0"
+    ]
+
+    versions = [
+            core_ktx_version                 : '1.8.0',
+            lifecycle_version                : '2.4.1',
+            activity_compose_version         : '1.4.0',
+
+            // Compose
+            compose_version                  : '1.2.0-rc02',
+            compose_material3_version        : '1.0.0-alpha13',
+            compose_nav_version              : '2.4.2',
+            hilt_nav_compose_version         : '1.0.0',
+
+            // Hilt
+            hilt_version                     : '2.42',
+            hilt_compiler_version            : '1.0.0',
+
+            // Coroutines
+            coroutines_version               : '1.5.1',
+
+            // Room
+            room_version                     : '2.3.0',
+
+            // Test
+            junit_version                    : '4.13.2',
+
+            // AndroidTest
+            android_junit_version            : '1.1.3',
+            espresso_version                 : '3.4.0'
+    ]
+
+    libraries = [
+            core_ktx                         : "androidx.core:core-ktx:$versions.core_ktx_version",
+            lifecycle_runtime_ktx            : "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycle_version",
+            activity_compose                 : "androidx.activity:activity-compose:$versions.activity_compose_version",
+
+            // Compose
+            compose_ui                       : "androidx.compose.ui:ui:$versions.compose_version",
+            compose_material3                : "androidx.compose.material3:material3:$versions.compose_material3_version",
+            compose_ui_tooling               : "androidx.compose.ui:ui-tooling-preview:$versions.compose_version",
+            lifecycle_viewmodel_compose      : "androidx.lifecycle:lifecycle-viewmodel-compose:$versions.lifecycle_version",
+            compose_navigation               : "androidx.navigation:navigation-compose:$versions.compose_nav_version",
+            hilt_navigation_compose          : "androidx.hilt:hilt-navigation-compose:$versions.hilt_nav_compose_version",
+            material_icons_extended          : "androidx.compose.material:material-icons-extended:$versions.compose_version",
+
+            // Hilt
+            hilt_android                     : "com.google.dagger:hilt-android:$versions.hilt_version",
+            hilt_android_compiler            : "com.google.dagger:hilt-android-compiler:$versions.hilt_version",
+            hilt_compiler                    : "androidx.hilt:hilt-compiler:$versions.hilt_compiler_version",
+
+            // Coroutines
+            coroutines_core                  : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines_version",
+            coroutines_android               : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines_version",
+
+            // Room
+            room_runtime                     : "androidx.room:room-runtime:$versions.room_version",
+            room_ktx                         : "androidx.room:room-ktx:$versions.room_version",
+            room_compiler                    : "androidx.room:room-compiler:$versions.room_version",
+
+            // Test
+            junit                            : "junit:junit:$versions.junit_version",
+
+            // AndroidTest
+            android_junit                    : "androidx.test.ext:junit:$versions.android_junit_version",
+            espresso                         : "androidx.test.espresso:espresso-core:$versions.espresso_version",
+            compose_ui_junit_test            : "androidx.compose.ui:ui-test-junit4:$versions.compose_version",
+
+            // Debug
+            compose_ui_test_manifest         : "androidx.compose.ui:ui-test-manifest:$versions.compose_version"
+    ]
+}

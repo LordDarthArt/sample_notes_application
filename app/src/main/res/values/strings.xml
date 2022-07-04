@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sample Notes Application</string>
+
+    <string name="notes_screen_title">Notes</string>
+    <string name="title_hint">Enter title</string>
+    <string name="content_hint">Enter some content</string>
+    <string name="note_deleted">Note deleted</string>
+    <string name="undo">Undo</string>
+    <string name="unexpected_error">Unexpected error</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="color">Color</string>
+    <string name="ascending">Ascending</string>
+    <string name="descending">Descending</string>
+
+    <string name="add_content_description">Add</string>
+    <string name="sort_content_description">Sort</string>
+    <string name="save_note_content_description">Save note</string>
+</resources>
